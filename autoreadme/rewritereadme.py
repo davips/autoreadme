@@ -62,7 +62,7 @@ def rewrite(input_file, scripts_folder, output_file):
             print("script file not found:", script)
             continue
 
-        code = open(script).read().split("\n")
+        code = open(script).read().split("\n")[1:]
         title = code[0][2:]
 
         # Handle each code segment separately.
@@ -72,7 +72,6 @@ def rewrite(input_file, scripts_folder, output_file):
             # Read until boundary given by "# ...".
             lines = list(takewhile(lambda x: "# ..." not in x, code[line:]))
 
-            print(lines)
             segment = "\n".join(lines)
             if segment == "":
                 break
