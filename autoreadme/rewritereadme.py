@@ -53,7 +53,6 @@ def rewrite(input_file, scripts_folder, output_file):
     tags = re.findall('<<.*?>>', txt)
 
     # Replace each tag by its respective code file (and output by running it).
-    towrite = []
     for tag in tags:
         # Read code file as lines.
         filename = tag[2:-2]
@@ -61,7 +60,6 @@ def rewrite(input_file, scripts_folder, output_file):
         script = scripts_folder + "/" + filename + ".py"
         if not os.path.exists(script):
             print("script file not found:", script)
-            towrite.append(tag)
             continue
 
         code = open(script).read().split("\n")
@@ -85,10 +83,10 @@ def rewrite(input_file, scripts_folder, output_file):
             partial.append("\n" + output(out))
 
             line += len(lines) + 1
-        towrite.append(collapse(title, "\n".join(partial)))
+        txt = txt.replace(tag, collapse(title, "\n".join(partial)))
     with open(output_file, "w") as f:
-        f.write("\n".join(towrite))
-        print(output_file, "written!")
+        f.write(txt)
+        print("\t", output_file, "written!")
 
 
 def main(argv):
