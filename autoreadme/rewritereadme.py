@@ -72,7 +72,10 @@ def rewrite(input_file, scripts_folder, output_file):
             # Read until boundary given by "# ...".
             lines = list(takewhile(lambda x: "# ..." not in x, code[line:]))
 
+            print(lines)
             segment = "\n".join(lines)
+            if segment == "":
+                break
             partial.append(codify(segment))
 
             # Run segment and capture output.
