@@ -38,7 +38,7 @@ def codify(text):
 
 
 def output(text):
-    return '```bash\n' + text + '```'
+    return '```\n' + text + '```'
 
 
 def rewrite(input_file, scripts_folder, output_file):
