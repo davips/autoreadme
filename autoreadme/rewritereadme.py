@@ -62,8 +62,9 @@ def rewrite(input_file, scripts_folder, output_file):
             print("script file not found:", script)
             continue
 
-        code = open(script).read().split("\n")[1:]
+        code = open(script).read().split("\n")
         title = code[0][2:]
+        code = code[1:]
 
         # Handle each code segment separately.
         line = 0
