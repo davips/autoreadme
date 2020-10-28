@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# IDE
+*.iml
+
+# Custom scripts output
+.branch_before_stashed
+.commit_before_stashed
+        
