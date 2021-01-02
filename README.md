@@ -1,5 +1,5 @@
 # autoreadme
-Generate READMEs with collapsable code and output from Python.
+Generate READMEs with collapsable code and corresponding output from Python.
 
 # Example
 A typical *README-edit.md* file would be:
