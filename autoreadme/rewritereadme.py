@@ -32,15 +32,16 @@ import sys, getopt
 
 
 def collapse(summary, content):
-    return f"<details>\n<summary>{summary}</summary>\n<p>\n\n{content}\n\n</p>\n</details>"
+    #return f"<details>\n<summary>{summary}</summary>\n<p>\n\n{content}\n\n</p>\n</details>"
+    return f"**{summary}**\n<p>\n\n{content}\n\n</p>"
 
 
 def codify(text):
-    return '```python3\n' + text + '\n```'
+    return '```python3' + text
 
 
 def output(text):
-    return '```\n' + text + '```'
+    return '# ' + text + '```'
 
 
 def rewrite(input_file, scripts_folder, output_file):
@@ -76,6 +77,7 @@ def rewrite(input_file, scripts_folder, output_file):
             lines = list(takewhile(lambda x: "# ..." not in x, code[line:]))
 
             segment = "\n".join(lines)
+            print("\t\t" + "\n\t\t".join(lines))
             if segment == "":
                 break
             partial.append(codify(segment))
@@ -85,7 +87,7 @@ def rewrite(input_file, scripts_folder, output_file):
             with redirect_stdout(f):
                 exec(segment)
             out = f.getvalue()
-            partial.append("\n" + output(out))
+            partial.append(output(out) + "\n")
 
             line += len(lines) + 1
         txt = txt.replace(tag, collapse(title, "\n".join(partial)))
