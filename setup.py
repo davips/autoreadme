@@ -53,6 +53,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     setup_requires=SETUP_REQUIRES,
     url=URL,
+    scripts=['rewritereadme']
 )
 
 package_dir = {'': 'autoreadme'}  # For IDEs like Intellij to recognize the package.

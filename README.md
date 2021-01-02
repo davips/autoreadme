@@ -1,6 +1,12 @@
 # autoreadme
 Generate READMEs with collapsable code and corresponding output from Python.
 
+# Intallation
+```bash
+pip install autoreadme
+rewritereadme
+```
+
 # Example
 A typical *README-edit.md* file would be:
 
@@ -34,7 +40,7 @@ print("this script prints another thing.", y)
 
 Running...
 ```bash
-python3 autoreadme/rewritereadme.py -i examples/README-edit.md -s examples/ -o examples/README.md examples/README-edit.md
+rewritereadme -i examples/README-edit.md -s examples/ -o examples/README.md examples/README-edit.md
 ```
 ...will result in the following markdown:
 
