@@ -1,6 +1,5 @@
 # autoreadme
 Generate READMEs with collapsable* code and corresponding output from Python.
-Collapsable isn't enabled due to pypi incompatibility with <details> tag.
 
 # Install
 ```bash
@@ -16,7 +15,7 @@ A typical *README-edit.md* file would be:
 We can cook using the following Python code:
 <<cook>>
 
-But we can also clean:
+However, we can also clean:
 <<clean>>
 ```
 
@@ -50,7 +49,7 @@ autoreadme -i examples/README-edit.md -s examples/ -o examples/README.md example
   
 We can cook using the following Python code:
 
-<!-- <details> -->
+<details>
 <summary>Cooking</summary>
 <p>
 
@@ -64,10 +63,10 @@ This script prints something: 16
 ```
 
 </p>
-<!-- </details> -->
+</details>
 
-  But we can also clean:
-<!-- <details> -->
+  However, we can also clean:
+<details>
 <summary>Cleaning</summary>
 <p>
 
@@ -81,5 +80,5 @@ this script prints another thing. 4
 ```
 
 </p>
-<!-- </details> -->
+</details>
 </blockquote>

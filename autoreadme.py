@@ -32,8 +32,9 @@ import sys, getopt
 
 
 def collapse(summary, content):
-    #return f"<details>\n<summary>{summary}</summary>\n<p>\n\n{content}\n\n</p>\n</details>"
-    return f"**{summary}**\n<p>\n\n{content}\n\n</p>"
+    return f"<details>\n<summary>{summary}</summary>\n<p>\n\n{content}\n\n</p>\n</details>"
+    # return f"{summary} <details>\n<p>\n\n{content}\n\n</p>\n</details>"
+    # return f"**{summary}**\n<p>\n\n{content}\n\n</p>"
 
 
 def codify(text):
