@@ -4,7 +4,7 @@ Generate READMEs with collapsable code and corresponding output from Python.
 # Intallation
 ```bash
 pip install autoreadme
-rewritereadme
+autoreadme
 ```
 
 # Example
@@ -40,7 +40,7 @@ print("this script prints another thing.", y)
 
 Running...
 ```bash
-rewritereadme -i examples/README-edit.md -s examples/ -o examples/README.md examples/README-edit.md
+autoreadme -i examples/README-edit.md -s examples/ -o examples/README.md examples/README-edit.md
 ```
 ...will result in the following markdown:
 

@@ -4,7 +4,7 @@ import autoreadme
 
 NAME = "autoreadme"
 
-VERSION = "0.2101.1"
+VERSION = "0.2101.3"
 
 AUTHOR = 'Davi Pereira-Santos'
 
@@ -53,7 +53,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     setup_requires=SETUP_REQUIRES,
     url=URL,
-    scripts=['rewritereadme']
+    scripts=['autoreadme']
 )
 
 package_dir = {'': 'autoreadme'}  # For IDEs like Intellij to recognize the package.
