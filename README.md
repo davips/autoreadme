@@ -4,10 +4,21 @@
 # autoreadme
 Generate READMEs with collapsable* code and corresponding output from Python.
 
-# Install
+## Installation
+### from package
 ```bash
+# Set up a virtualenv. 
+python3 -m venv venv
+source venv/bin/activate
+
+# Install from PyPI
 pip install autoreadme
-autoreadme
+```
+
+### from source
+```bash
+git clone https://github.com/davips/autoreadme
+cd autoreadme
 ```
 
 # Example
