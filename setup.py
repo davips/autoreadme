@@ -1,6 +1,6 @@
 import setuptools
 
-import autoreadme
+#import autoreadme
 
 NAME = "autoreadme"
 
