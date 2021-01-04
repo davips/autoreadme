@@ -49,8 +49,7 @@ autoreadme -i examples/README-edit.md -s examples/ -o examples/README.md example
   
 We can cook using the following Python code:
 
-<details>
-<summary>Cooking</summary>
+**Cooking** <details>
 <p>
 
 ```python3
@@ -66,8 +65,7 @@ This script prints something: 16
 </details>
 
   However, we can also clean:
-<details>
-<summary>Cleaning</summary>
+  **Cleaning** <details>
 <p>
 
 ```python3
