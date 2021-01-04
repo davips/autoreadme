@@ -56,4 +56,4 @@ setuptools.setup(
     scripts=['autoreadme']
 )
 
-package_dir = {'': 'autoreadme'}  # For IDEs like Intellij to recognize the package.
+package_dir = {'': '.'}  # For IDEs like Intellij to recognize the package.
