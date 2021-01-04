@@ -135,3 +135,4 @@ dmypy.json
 .branch_before_stashed
 .commit_before_stashed
         
+.idea

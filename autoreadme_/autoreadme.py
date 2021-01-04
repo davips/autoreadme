@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 #  Copyright (c) 2020. Davi Pereira dos Santos
 #  This file is part of the autoreadme project.
 #  Please respect the license - more about this in the section (*) below.
@@ -28,25 +26,47 @@ import os
 import re
 from contextlib import redirect_stdout
 from itertools import takewhile
-import sys, getopt
 
 
 def collapse(summary, content):
-    return f"<details>\n<summary>{summary}</summary>\n<p>\n\n{content}\n\n</p>\n</details>"
-    # return f"{summary} <details>\n<p>\n\n{content}\n\n</p>\n</details>"
+    r"""Collapsable content. Ps. It seems like <summary> is not working on pypi markdown.
+
+    Usage:
+        >>> collapse("Label", "text")
+        '**Label** <details>\n<p>\n\ntext\n\n</p>\n</details>'
+    """
+    # return f"<details>\n<summary>{summary}</summary>\n<p>\n\n{content}\n\n</p>\n</details>"
+    return f"**{summary}** <details>\n<p>\n\n{content}\n\n</p>\n</details>"
     # return f"**{summary}**\n<p>\n\n{content}\n\n</p>"
 
 
 def codify(text):
-    return '```python3' + text
+    """
+    Usage:
+    >>> print(codify("text"))
+    ```python3
+    text
+    """
+    return '```python3\n' + text
 
 
 def output(text):
+    """
+    Usage:
+    >>> print(output("text"))
+    # text```
+    """
     return '# ' + text + '```'
 
 
 def rewrite(input_file, scripts_folder, output_file):
-    # Check existence of README-edit.md at the provided folder.
+    """ Check existence of README-edit.md at the provided folder.
+
+    Usage:
+        >>> rewrite("README-edit.md", "examples", "README.md")
+        Traceback (most recent call last):
+        Exception: ('input_file not found:', 'README-edit.md')
+    """
     file = input_file
     if not os.path.exists(file):
         raise Exception("input_file not found:", input_file)
@@ -95,35 +115,3 @@ def rewrite(input_file, scripts_folder, output_file):
     with open(output_file, "w") as f:
         f.write(txt)
         print("\t", output_file, "written!")
-
-
-def main(argv):
-    # Args handling based on https://www.tutorialspoint.com/python/python_command_line_arguments.htm
-    inputfile = scripts = outputfile = None
-    try:
-        opts, args = getopt.getopt(argv, "hi:s:o:", ["ifile=", "scripts=", "ofile="])
-    except getopt.GetoptError:
-        print("Usage:")
-        print('rewritereadme.py -i <inputfile> -s <scriptsfolder> -o <outputfile>')
-        sys.exit(2)
-    for opt, arg in opts:
-        if opt == '-h':
-            print('rewritereadme.py -i <inputfile> -s <scriptsfolder> -o <outputfile>')
-            print("Tags <<mycode1>>, <<mycode2>>, ...  in the inputfile will be replaced by the code and its output, using markdown syntax.")
-            print("The first line in each script should be a comment containing a title for the code.")
-            sys.exit()
-        elif opt in ("-i", "--ifile"):
-            inputfile = arg
-        elif opt in ("-s", "--scripts"):
-            scripts = arg
-        elif opt in ("-o", "--ofile"):
-            outputfile = arg
-    if None in [inputfile, scripts, outputfile]:
-        print("Usage:")
-        print('rewritereadme.py -i <inputfile> -s <scriptsfolder> -o <outputfile>')
-        sys.exit(2)
-    rewrite(inputfile, scripts, outputfile)
-
-
-if __name__ == "__main__":
-    main(sys.argv[1:])

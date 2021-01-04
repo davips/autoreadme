@@ -1,0 +1,11 @@
+[run]
+omit =
+    # abstract classes
+    */abs/*
+    
+    # examples
+    */examples/*
+
+    setup.py
+    packit.py
+    venv
