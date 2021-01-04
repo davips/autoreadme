@@ -29,11 +29,21 @@ from itertools import takewhile
 
 
 def collapse(summary, content):
-    r"""Collapsable content. Ps. It seems like <summary> is not working on pypi markdown.
+    r"""
+    Collapsable content. Ps. It seems like <summary> is not working on pypi markdown.
 
     Usage:
         >>> collapse("Label", "text")
         '**Label** <details>\n<p>\n\ntext\n\n</p>\n</details>'
+
+    Parameters
+    ----------
+    summary
+    content
+
+    Returns
+    -------
+
     """
     # return f"<details>\n<summary>{summary}</summary>\n<p>\n\n{content}\n\n</p>\n</details>"
     return f"**{summary}** <details>\n<p>\n\n{content}\n\n</p>\n</details>"

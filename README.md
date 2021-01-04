@@ -44,12 +44,14 @@ autoreadme -i examples/README-edit.md -s examples/ -o examples/README.md example
 ```
 ...will result in the following markdown:
 
+
 <blockquote>
 # Uses
-  
+
 We can cook using the following Python code:
 
-**Cooking** <details>
+**Cooking**
+<details>
 <p>
 
 ```python3
@@ -64,8 +66,10 @@ This script prints something: 16
 </p>
 </details>
 
-  However, we can also clean:
-  **Cleaning** <details>
+However, we can also clean:
+
+**Cleaning** 
+<details>
 <p>
 
 ```python3
