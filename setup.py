@@ -4,7 +4,7 @@ import setuptools
 
 NAME = "autoreadme"
 
-VERSION = "0.2101.10"
+VERSION = "0.2101.11"
 
 AUTHOR = 'Davi Pereira-Santos'
 
