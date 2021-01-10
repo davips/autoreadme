@@ -66,7 +66,7 @@ def output(text):
     >>> print(output("text"))
     # text```
     """
-    return '# ' + text + '```'
+    return '"""\n' + text + '\n"""\n```'
 
 
 def rewrite(input_file, scripts_folder, output_file):
