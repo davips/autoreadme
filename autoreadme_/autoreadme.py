@@ -61,11 +61,15 @@ def codify(text):
 
 
 def output(text):
-    """
+    '''
     Usage:
-    >>> print(output("text"))
-    # text```
-    """
+        >>> print(output("text"))
+        """
+        text
+        """
+        ```
+
+    '''
     return '"""\n' + text + '\n"""\n```'
 
 
