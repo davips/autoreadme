@@ -26,11 +26,10 @@
 import getopt
 import sys
 
-from autoreadme_.autoreadme import *
-
 
 def main(argv):
     """Args handling based on https://www.tutorialspoint.com/python/python_command_line_arguments.htm"""
+    from autoreadme_.autoreadme import rewrite
     inputfile = scripts = outputfile = None
     try:
         opts, args = getopt.getopt(argv, "hi:s:o:", ["ifile=", "scripts=", "ofile="])

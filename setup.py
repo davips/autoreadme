@@ -1,6 +1,6 @@
 import setuptools
 
-#import autoreadme
+#import autoreadme_
 
 NAME = "autoreadme"
 
@@ -56,4 +56,4 @@ setuptools.setup(
     scripts=['autoreadme']
 )
 
-package_dir = {'': '.'}  # For IDEs like Intellij to recognize the package.
+package_dir = {'': 'autoreadme_'}  # For IDEs like Intellij to recognize the package.
