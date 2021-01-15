@@ -33,8 +33,9 @@ def collapse(summary, content):
     Collapsable content. Ps. It seems like <summary> is not working on pypi markdown.
 
     Usage:
-        >>> collapse("Label", "text")
-        '**Label** <details>\n<p>\n\ntext\n\n</p>\n</details>'
+
+    >>> collapse("Label", "text")
+    '**Label**\n<details>\n<p>\n\ntext\n\n</p>\n</details>'
 
     Parameters
     ----------
@@ -46,7 +47,7 @@ def collapse(summary, content):
 
     """
     # return f"<details>\n<summary>{summary}</summary>\n<p>\n\n{content}\n\n</p>\n</details>"
-    return f"**{summary}** <details>\n<p>\n\n{content}\n\n</p>\n</details>"
+    return f"**{summary}**\n<details>\n<p>\n\n{content}\n\n</p>\n</details>"
     # return f"**{summary}**\n<p>\n\n{content}\n\n</p>"
 
 
@@ -63,14 +64,16 @@ def codify(text):
 def output(text):
     '''
     Usage:
-        >>> print(output("text"))
-        """
-        text
-        """
-        ```
 
+    >>> print(output("text"))  # doctest: +NORMALIZE_WHITESPACE
+    """
+    text"""
+    ```
     '''
-    return '"""\n' + text + '\n"""\n```'
+    if text:
+        return '"""\n' + text + '"""\n```'
+    else:
+        return '```'
 
 
 def rewrite(input_file, scripts_folder, output_file):
