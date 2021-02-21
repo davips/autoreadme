@@ -1,7 +1,5 @@
 import setuptools
 
-#import autoreadme_
-
 NAME = "autoreadme"
 
 VERSION = "0.2101.15"

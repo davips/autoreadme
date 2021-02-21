@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "autoreadme"
+version = "0.2101.17"
+description = "Generate READMEs with collapsable code and corresponding output from Python."
+authors = ["davips <dpsabc@gmail.com>"]
+license = "GPL3"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+packagit = "^0.2101.11"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.2"
+pytest-cov = "^2.11.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
