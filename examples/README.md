@@ -1,4 +1,5 @@
 # Uses
+
 We can cook using the following Python code:
 **Cooking** <details>
 <p>
@@ -12,11 +13,10 @@ This script prints something: 16
 """
 ```
 
-
 </p>
 </details>
 
-  But we can also clean:
+But we can also clean:
 **Cleaning** <details>
 <p>
 
@@ -28,7 +28,6 @@ this script prints another thing. 4
 
 """
 ```
-
 
 </p>
 </details>

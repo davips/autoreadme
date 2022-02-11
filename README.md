@@ -2,10 +2,13 @@
 [![codecov](https://codecov.io/gh/davips/autoreadme/branch/main/graph/badge.svg)](https://codecov.io/gh/davips/autoreadme)
 
 # autoreadme
+
 Generate READMEs with collapsable* code and corresponding output from Python.
 
 ## Installation
+
 ### from package
+
 ```bash
 # Set up a virtualenv. 
 python3 -m venv venv
@@ -16,12 +19,14 @@ pip install autoreadme
 ```
 
 ### from source
+
 ```bash
 git clone https://github.com/davips/autoreadme
 cd autoreadme
 ```
 
 # Example
+
 A typical *README-edit.md* file would be:
 
 ```markdown
@@ -33,10 +38,11 @@ However, we can also clean:
 <<clean>>
 ```
 
-The example file (given in this repo as *examples/README-edit.md*) depends on two scripts.
-Each script should have a `# ...` line where the output until that moment is expected to appear:
+The example file (given in this repo as *examples/README-edit.md*) depends on two scripts. Each script should have
+a `# ...` line where the output until that moment is expected to appear:
 
 *examples/cook.py*:
+
 ```python3
 # Cooking
 x = 2 * 8
@@ -45,6 +51,7 @@ print("This script prints something:", x)
 ```
 
 *examples/clean.py*:
+
 ```python3
 # Cleaning
 y = 34 % 5
@@ -53,9 +60,11 @@ print("this script prints another thing.", y)
 ```
 
 Running...
+
 ```bash
 autoreadme -i examples/README-edit.md -s examples/ -o examples/README.md examples/README-edit.md
 ```
+
 ...will result in the following markdown:
 
 
@@ -82,7 +91,7 @@ This script prints something: 16
 
 However, we can also clean:
 
-**Cleaning** 
+**Cleaning**
 <details>
 <p>
 
@@ -98,7 +107,6 @@ this script prints another thing. 4
 </p>
 </details>
 </blockquote>
-
 
 ## Features / TODO
 
