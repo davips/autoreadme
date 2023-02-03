@@ -107,9 +107,3 @@ this script prints another thing. 4
 </p>
 </details>
 </blockquote>
-
-## Features / TODO
-
-* [x] . . .
-* [ ] Fix """ """ in excess after command without '# ...'
-*        [ ] . . .
