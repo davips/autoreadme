@@ -1,6 +1,7 @@
 ![test](https://github.com/davips/autoreadme/workflows/test/badge.svg)
 [![codecov](https://codecov.io/gh/davips/autoreadme/branch/main/graph/badge.svg)](https://codecov.io/gh/davips/autoreadme)
-
+[![Downloads](https://static.pepy.tech/badge/autoreadme)](https://pepy.tech/project/autoreadme)
+ 
 # autoreadme
 
 Generate READMEs with collapsable* code and corresponding output from Python.
