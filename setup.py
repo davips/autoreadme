@@ -2,13 +2,13 @@ import setuptools
 
 NAME = "autoreadme"
 
-VERSION = "0.2102.20"
+VERSION = "0.2302.1"
 
 AUTHOR = 'Davi Pereira-Santos'
 
 AUTHOR_EMAIL = 'dpsabc@gmail.com'
 
-DESCRIPTION = 'Haskell-like intervals for Python'
+DESCRIPTION = 'Generate READMEs with collapsable* code and corresponding output from Python'
 
 with open('README.md', 'r') as fh:
     LONG_DESCRIPTION = fh.read()
